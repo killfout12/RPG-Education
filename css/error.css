@@ -1,0 +1,10 @@
+.error{
+    text-align: center;
+    box-shadow: inset 0px 0px 15px 2px;
+    background-color: rgb(255, 255, 255, 0.8);
+    width: auto;
+    height: auto;
+    border-radius: 2px;
+    color: rgb(0, 0, 0); /* Define a cor do texto como branca */
+    text-shadow: 2px 2px 4px rgb(86, 0, 0); /* Aplica uma sombra preta ao texto */
+}
