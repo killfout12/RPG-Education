@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="viewport" content="user-scalable=no">
+        <link rel="icon" href="icon/icon.png" type="image/png">
+        <link rel="apple-touch-icon" href="icon/icon.png">
+        <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
+        <title>RpgEducation</title>
+    </head>
+
+    <style>
+        .btn-back-game{
+            
+            
+            font-family: monospace;
+            background-color: #c8c8c8;
+            color: #3b3b3b;
+            border: none;
+            border-radius: 8px;
+            width: 100px;
+            height: 45px;
+            transition: .3s;
+            }
+
+        .btn-back-game:hover {
+            background-color: #3e3e3e;
+            box-shadow: 0 0 0 5px #0000005f;
+            color: #fff;
+            }
+
+            .wrapper {
+            display: inline-flex;
+            list-style: none;
+            height: 120px;
+            width: 200px;
+            font-family: "Poppins", sans-serif;
+            
+            }
+
+            .wrapper .icon {
+            position: relative;
+            background: #c8c8c8;
+            border-radius: 50%;
+            margin: 10px;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .wrapper .tooltip {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            background: #8e8e8e;
+            color: #fff;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .wrapper .tooltip::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: #777777;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+
+            .wrapper .icon:hover .tooltip {
+            top: -45px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            }
+
+            .wrapper .icon:hover span,
+            .wrapper .icon:hover .tooltip {
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+            }
+
+            .wrapper .facebook:hover,
+            .wrapper .facebook:hover .tooltip,
+            .wrapper .facebook:hover .tooltip::before {
+            background: #313336;
+            color: #fff;
+            }
+
+            .wrapper .twitter:hover,
+            .wrapper .twitter:hover .tooltip,
+            .wrapper .twitter:hover .tooltip::before {
+            background: #f21d1d;
+            color: #fff;
+            }
+
+            .wrapper .instagram:hover,
+            .wrapper .instagram:hover .tooltip,
+            .wrapper .instagram:hover .tooltip::before {
+            background: #E4405F;
+            color: #fff;
+            }
+
+            .slaoq{
+                margin-left:37% ;
+            }
+
+            
+    </style>
+
+    <body style="background-image: url(../img/wll.png);">
+        <div style="width: 100px; height: 700px; margin-left: 500px;"></div>
+        <script type="text/javascript" src="js/libs/pixi.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-tilemap.js"></script>
+        <script type="text/javascript" src="js/libs/pixi-picture.js"></script>
+        <script type="text/javascript" src="js/libs/fpsmeter.js"></script>
+        <script type="text/javascript" src="js/libs/lz-string.js"></script>
+        <script type="text/javascript" src="js/libs/iphone-inline-video.browser.js"></script>
+        <script type="text/javascript" src="js/rpg_core.js"></script>
+        <script type="text/javascript" src="js/rpg_managers.js"></script>
+        <script type="text/javascript" src="js/rpg_objects.js"></script>
+        <script type="text/javascript" src="js/rpg_scenes.js"></script>
+        <script type="text/javascript" src="js/rpg_sprites.js"></script>
+        <script type="text/javascript" src="js/rpg_windows.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+ 
+        <div class="slaoq">
+
+            
+
+            <button class="btn-back-game" onclick="confirmExit()">Voltar</button>
+            
+            <ul class="wrapper">
+                <li class="icon facebook" onclick="window.location.href='https://discord.gg/VVxa7Wz3'">
+                  <span class="tooltip">Discord</span>
+                  <span><i class="fab fa-facebook-f"></i></span>
+                </li>
+                <li class="icon twitter" onclick="window.location.href='https://www.youtube.com'">
+                  <span class="tooltip">Youtube</span>
+                  <span><i class="fab fa-twitter"></i></span>
+                </li>
+                <li class="icon instagram" onclick="window.location.href='https://www.instagram.com'">
+                  <span class="tooltip">Instagram</span>
+                  <span><i class="fab fa-instagram"></i></span>
+                </li>
+              </ul>
+        </div>
+
+        <script>
+            function confirmExit() {
+            if (confirm("Tem certeza que deseja sair da página?")) {
+              // aqui você pode redirecionar o usuário para outra página, ou executar outra ação desejada
+              window.location = "../teste1.php";
+            }
+          }
+        </script>
+    </body>
+</html>
